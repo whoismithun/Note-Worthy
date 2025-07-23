@@ -1,99 +1,136 @@
-Note-Worthy 📝
-Note-Worthy is a full-stack MERN (MongoDB, Express, React, Node.js) application that allows users to securely create, manage, and access their personal notes. It features a modern, responsive interface and a robust backend with user authentication.
 
-✨ Features
-Secure User Authentication: Users can register for a new account and log in to a personal session.
+# 📝 Note-Worthy
 
-JWT-Protected API: All user-specific data and note-related API endpoints are protected via JSON Web Token (JWT) authentication.
+**Note-Worthy** is a full-stack MERN (MongoDB, Express, React, Node.js) application that allows users to securely create, manage, and access their personal notes. It features a modern, responsive interface and a robust backend with user authentication and rate limiting.
 
-Full CRUD Functionality: Users can Create, Read, Update, and Delete their own notes.
+---
 
-Modern UI: A clean, responsive, and themeable user interface built with React and styled with Tailwind CSS & daisyUI.
+## ✨ Features
 
-API Rate Limiting: The backend is protected against spam and brute-force attacks with request rate limiting.
+- 🔐 **Secure User Authentication**  
+  Users can register and log in to their personal accounts securely.
 
-🛠️ Tech Stack
-Frontend: React, Vite, Tailwind CSS, daisyUI, Axios
+- 🔑 **JWT-Protected API**  
+  All user and note-related API endpoints are secured using JSON Web Tokens (JWT).
 
-Backend: Node.js, Express.js
+- 📝 **Full CRUD Functionality**  
+  Users can **Create**, **Read**, **Update**, and **Delete** their notes.
 
-Database: MongoDB with Mongoose
+- 💅 **Modern UI**  
+  Built with **React**, styled using **Tailwind CSS** and **daisyUI** for a clean, responsive, and customizable design.
 
-Authentication: JSON Web Tokens (JWT), bcryptjs
+- 🚫 **API Rate Limiting**  
+  Protects backend endpoints from spam and brute-force attacks.
 
-🚀 Getting Started
-Follow these instructions to set up and run the project on your local machine.
+---
 
-Prerequisites
-Node.js (v18 or later recommended)
+## 🛠️ Tech Stack
 
-MongoDB installed locally or a MongoDB Atlas connection string.
+**Frontend:**
+- React (with Vite)
+- Tailwind CSS
+- daisyUI
+- Axios
 
-mongosh or another MongoDB client to manage the database if needed.
+**Backend:**
+- Node.js
+- Express.js
 
-1. Clone the Repository
-First, clone the repository to your local machine:
+**Database:**
+- MongoDB (with Mongoose)
 
-Bash
+**Authentication & Security:**
+- JSON Web Tokens (JWT)
+- bcryptjs (for password hashing)
+- express-rate-limit (for rate limiting)
 
+---
+
+## 🚀 Getting Started
+
+Follow these instructions to set up and run the project locally.
+
+### ✅ Prerequisites
+
+- Node.js (v18 or later)
+- MongoDB installed locally or a MongoDB Atlas URI
+- `mongosh` or any MongoDB client
+
+---
+
+### 📁 Clone the Repository
+
+```bash
 git clone https://github.com/your-username/Note-Worthy.git
 cd Note-Worthy
-2. Backend Setup
-Navigate to the backend folder, create your environment file, and install the necessary dependencies.
+```
 
-Bash
+---
 
-# Navigate to the backend directory
+## 🔧 Backend Setup
+
+```bash
+# Navigate to backend directory
 cd backend
 
 # Install dependencies
 npm install
-3. Frontend Setup
-In a new terminal, or after returning to the root folder, navigate to the frontend folder and install its dependencies.
+```
 
-Bash
+### 🔑 Environment Variables
 
-# Navigate to the frontend directory from the root
-cd frontend
+Create a `.env` file inside the `backend` directory:
 
-# Install dependencies
-npm install
-🔑 Environment Variables
-The backend requires a few environment variables to connect to the database and manage security.
-
-In the backend directory, create a new file named .env.
-
-Copy the following content into the .env file and replace the placeholder values with your own.
-
-# MongoDB Connection URI (local or from Atlas)
+```env
 MONGO_URI=mongodb://127.0.0.1:27017/note-worthy
-
-# Port for the backend server
 PORT=5001
-
-# Your secret key for signing JSON Web Tokens (generate a long, random string)
 JWT_SECRET=your_super_random_and_long_secret_string
-🏃‍♂️ Running the Application
-You will need two separate terminals open to run both the backend and frontend servers simultaneously.
+```
 
-In your first terminal (for the Backend):
+---
 
-Bash
+## 💻 Frontend Setup
 
-# Navigate to the backend directory
-cd backend
+Open a new terminal and run:
 
-# Start the backend server
-npm run dev
-Your backend API will be running at http://localhost:5001.
-
-In your second terminal (for the Frontend):
-
-Bash
-
-# Navigate to the frontend directory
+```bash
+# Navigate to frontend directory
 cd frontend
 
-# Start the frontend development server
+# Install dependencies
+npm install
+```
+
+---
+
+## 🏃‍♂️ Running the Application
+
+### In Terminal 1: Start Backend Server
+
+```bash
+cd backend
 npm run dev
-Your React application will be running at http://localhost:5173. You can now open this URL in your browser.
+```
+
+> The backend will run on: [http://localhost:5001](http://localhost:5001)
+
+### In Terminal 2: Start Frontend App
+
+```bash
+cd frontend
+npm run dev
+```
+
+> The frontend will run on: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🙌 Acknowledgements
+
+- [MongoDB](https://www.mongodb.com/)
+- [Express](https://expressjs.com/)
+- [React](https://reactjs.org/)
+- [Node.js](https://nodejs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [daisyUI](https://daisyui.com/)
+
