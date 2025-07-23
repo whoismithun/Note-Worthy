@@ -42,7 +42,7 @@
 **Authentication & Security:**
 - JSON Web Tokens (JWT)
 - bcryptjs (for password hashing)
-- express-rate-limit (for rate limiting)
+- Rate limiting using a Redis database (leveraging the functionality provided at upstash)
 
 ---
 
@@ -55,6 +55,7 @@ Follow these instructions to set up and run the project locally.
 - Node.js (v18 or later)
 - MongoDB installed locally or a MongoDB Atlas URI
 - `mongosh` or any MongoDB client
+- A preconfigured redis database on upstash 
 
 ---
 
