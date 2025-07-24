@@ -86,6 +86,8 @@ Create a `.env` file inside the `backend` directory:
 MONGO_URI=mongodb://127.0.0.1:27017/note-worthy
 PORT=5001
 JWT_SECRET=your_super_random_and_long_secret_string
+UPSTASH_REDIS_REST_URL=url_to_your_upstash_redis_database
+UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_database_rest_token
 ```
 
 ---
