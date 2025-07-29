@@ -1,4 +1,5 @@
 import express from "express";
+import rateLimiter from "../middleware/rateLimiter.js";
 import {
   createNote,
   deleteNote,
@@ -13,11 +14,11 @@ const router = express.Router();
 // Apply the authMiddleware to all routes in this file
 // The middleware will run before any of the controller functions
 
-router.get("/", authMiddleware, getAllNotes);
-router.post("/", authMiddleware, createNote);
+router.get("/", authMiddleware, rateLimiter, getAllNotes);
+router.post("/", authMiddleware, rateLimiter, createNote);
 
-router.get("/:id", authMiddleware, getNoteById);
-router.put("/:id", authMiddleware, updateNote);
-router.delete("/:id", authMiddleware, deleteNote);
+router.get("/:id", authMiddleware, rateLimiter, getNoteById);
+router.put("/:id", authMiddleware, rateLimiter, updateNote);
+router.delete("/:id", authMiddleware, rateLimiter, deleteNote);
 
 export default router;
